@@ -4,4 +4,4 @@ index 3b85091..e29590e 100644
 +++ b/node_modules/starlight-site-graph/styles/layers.css
 @@ -1 +1 @@
 -@layer starlight, sitegraph, obsidian;
-+@layer base, starlight, sitegraph, obsidian;
++@layer properties, base, starlight, sitegraph, obsidian;
