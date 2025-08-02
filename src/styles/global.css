@@ -66,6 +66,6 @@ img[alt='inline'] {
 }
 
 :root[data-theme='dark'] {
-  --slsg-node-color-current: #fff;
+  --slsg-node-color-current: #ffffff;
   --slsg-node-color-visited: #f3b8b2;
 }
