@@ -1,0 +1,71 @@
+@layer base, starlight, theme, components, utilities;
+
+@import '@astrojs/starlight-tailwind';
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+@theme {
+	/* Generated accent color palettes. */
+	--color-accent-200: #f3b8b2;
+	--color-accent-600: #c81123;
+	--color-accent-900: #5c1414;
+	--color-accent-950: #3f1312;
+	/* Generated gray color palettes. */
+	--color-gray-100: #f8f6f6;
+	--color-gray-200: #f0eded;
+	--color-gray-300: #c5c1c1;
+	--color-gray-400: #928989;
+	--color-gray-500: #5e5656;
+	--color-gray-700: #3e3636;
+	--color-gray-800: #2c2525;
+	--color-gray-900: #1b1717;
+}
+
+/*
+Add additional Tailwind styles to this file:
+https://tailwindcss.com/docs/adding-custom-styles#using-custom-css
+*/
+@layer components {
+    .card {
+        @apply rounded-md;
+    }
+}
+
+body {
+    --tab-switcher-border-width: 1px;
+    --tab-switcher-padding: calc(0.25rem - var(--tab-switcher-border-width));
+    --tab-item-border-radius: 0.5rem;
+    --tab-switcher-border-radius: calc(
+        var(--tab-item-border-radius) + var(--tab-switcher-padding) + var(--tab-switcher-border-width)
+    );
+    --tab-switcher-border-color: var(--sl-color-hairline-light);
+    --tab-switcher-text-color--active: var(--sl-color-white);
+    --tab-switcher-icon-color--active: var(--sl-color-text-accent);
+    --tab-switcher-text-color: var(--sl-color-gray-2);
+    --tab-switcher-icon-color: var(--sl-color-gray-3);
+    --tab-switcher-background-color: var(--sl-color-black);
+    --tab-item-background-color--hover: var(--sl-color-gray-6);
+    --tab-item-background-color--active: var(--sl-color-gray-6);
+    --sl-line-height-headings: 1.2;
+}
+
+img[alt='inline'] {
+    display: inline-block !important;
+    margin: 0 !important;
+    margin-bottom: 1px !important;
+    vertical-align: middle;
+}
+
+.expressive-code pre > code {
+    font-size: smaller;
+}
+
+:root[data-theme='light'] {
+  --slsg-node-color-current: #1b1717;
+  --slsg-node-color-visited: #c81123;
+}
+
+:root[data-theme='dark'] {
+  --slsg-node-color-current: #fff;
+  --slsg-node-color-visited: #f3b8b2;
+}
